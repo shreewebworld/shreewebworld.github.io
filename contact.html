@@ -1,19 +1,4 @@
-<?php 
-if(isset($_POST['submit'])) {
-$name = $_POST['name'];
-$email = $_POST['email'];
-$mobile = $_POST['mobile'];
-$message1= $_POST['message'];
-$message="Name : {$name}\r\n Mobile No : {$mobile}\r\n Message : {$message1}";
-$subject = 'Message from our website www.shriwebworld.in';
-$to = 'mauli5040@gmail.com';
 
-$headers="From: {$email}\r\nReply-To: {$email}";
-mail($to,$subject,$message,$headers);
-$success = "Thank you! We will reach You shortly";
-echo "<script>alert('Thank you! Form Submited Successfully. We will reach You shortly')</script>";
-}
-?>
 
 <!doctype html>
 <html>
@@ -25,7 +10,6 @@ echo "<script>alert('Thank you! Form Submited Successfully. We will reach You sh
 <style>
 
 </style>
-
 </head>
 
 <body>
@@ -38,10 +22,10 @@ echo "<script>alert('Thank you! Form Submited Successfully. We will reach You sh
 </div><!--end header -->
 <div class="navbar">
  <ul>
- 	<li><a href="http://www.shriwebworld.in">Home</a></li>
+ 	<li><a href="index.html">Home</a></li>
     <li><a href="services.html">Services</a></li>
     
-    <li><a class="active" href="contact.php">Contact</a></li>
+    <li><a class="active" href="contact.html">Contact</a></li>
     <li><a href="">  <img style=";" src="images/phone.png" width="29" height="27">+91 8605385040</a></li>
   </ul>
 </div><!--end navbar -->
@@ -49,7 +33,7 @@ echo "<script>alert('Thank you! Form Submited Successfully. We will reach You sh
 <div class="contact">
 
 <h1 style="text-shadow:0px 0px 5px #000000;color:#F30">Shri Web World</h1>
-<h2>Dnyaneshwar Naiknavare</h2><h2 style="color:#900"><img src="images/phone.png" width="50" height="46" style="" >+91 8605385040</h2> Email: mauli5040@gmail.com<br>
+<h2>Dnyaneshwar Naiknavare</h2><h2 style="color:#900"><img src="phone.png" width="50" height="46" style="" >+91 8605385040</h2> Email: mauli5040@gmail.com<br>
 
 
 
@@ -65,15 +49,12 @@ echo "<script>alert('Thank you! Form Submited Successfully. We will reach You sh
 <input type="text" name="name" value="" placeholder="Enter Name"><br>
 
 <label for="number">Mobile No.</label>
-<input type="text" name="mobile" placeholder="10 Digit Mobile No"><br>
+<input type="text" name="number" value="" placeholder="10 Digit Mobile No"><br>
 
-<label for="mail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
-<input type="text" name="mail" value="" placeholder="email"><br>
+<label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
+<input type="text" name="email" value="" placeholder="Email"><br>
 
-<label for="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Message</label>
-<input type="text" name="message"><br>
-
-<input type="submit" value="Submit" name="submit">
+<input type="submit" value="Submit">
 </fieldset>
 
 </form>
